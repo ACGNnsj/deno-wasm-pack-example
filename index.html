@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="importmap">
+{
+  "imports": {
+    "rust-lib-esm": "./rust-lib-esm/pkg/rust_lib_esm.js"
+  }
+}
+</script>
+<script type="module">
+  import * as e from "rust-lib-esm";
+
+  e.default().then(wasm => {
+    window.console.log('start')
+    window.console.log(wasm)
+    window.console.log(e.add)
+    window.console.log(wasm.add(432432,543))
+    console.log(e.add(2351, 53422));
+    window.console.log('end')
+  });
+</script>
+<script type="module">
+  import * as e from "rust-lib-esm";
+
+  await e.default()
+  window.console.log(e.add(423, 4325))
+</script>
+</html>
