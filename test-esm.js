@@ -1,4 +1,5 @@
 import init, {add} from "./rust-lib-esm/pkg/rust_lib_esm.js";
+import * as e from "./rust-lib-esm/pkg/rust_lib_esm.js";
 
 /*init().then(wasm => {
   window.console.log(wasm)
@@ -6,3 +7,4 @@ import init, {add} from "./rust-lib-esm/pkg/rust_lib_esm.js";
 })*/
 await init()
 window.console.log(add(423, 4322))
+e.info()
